@@ -5,7 +5,6 @@ import 'package:dio/dio.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:intl/intl.dart';
 import 'package:universal_io/io.dart';
-import 'package:flutter/foundation.dart';
 
 part 'isbndb.freezed.dart';
 part 'isbndb.g.dart';
