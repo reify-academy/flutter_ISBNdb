@@ -110,9 +110,7 @@ class __$$_AuthorQueryResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AuthorQueryResult
-    with DiagnosticableTreeMixin
-    implements _AuthorQueryResult {
+class _$_AuthorQueryResult implements _AuthorQueryResult {
   _$_AuthorQueryResult(
       {required this.total, final List<String> authors = const []})
       : _authors = authors;
@@ -137,17 +135,8 @@ class _$_AuthorQueryResult
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AuthorQueryResult(total: $total, authors: $authors)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'AuthorQueryResult'))
-      ..add(DiagnosticsProperty('total', total))
-      ..add(DiagnosticsProperty('authors', authors));
   }
 
   @override
@@ -292,7 +281,7 @@ class __$$_AuthorCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Author with DiagnosticableTreeMixin implements _Author {
+class _$_Author implements _Author {
   _$_Author({required this.author, final List<Book> books = const []})
       : _books = books;
 
@@ -316,17 +305,8 @@ class _$_Author with DiagnosticableTreeMixin implements _Author {
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'Author(author: $author, books: $books)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'Author'))
-      ..add(DiagnosticsProperty('author', author))
-      ..add(DiagnosticsProperty('books', books));
   }
 
   @override
@@ -473,9 +453,7 @@ class __$$_BookQueryResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_BookQueryResult
-    with DiagnosticableTreeMixin
-    implements _BookQueryResult {
+class _$_BookQueryResult implements _BookQueryResult {
   _$_BookQueryResult({required this.total, final List<Book> books = const []})
       : _books = books;
 
@@ -499,17 +477,8 @@ class _$_BookQueryResult
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'BookQueryResult(total: $total, books: $books)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'BookQueryResult'))
-      ..add(DiagnosticsProperty('total', total))
-      ..add(DiagnosticsProperty('books', books));
   }
 
   @override
@@ -964,7 +933,7 @@ class __$$_BookCopyWithImpl<$Res> extends _$BookCopyWithImpl<$Res, _$_Book>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Book with DiagnosticableTreeMixin implements _Book {
+class _$_Book implements _Book {
   _$_Book(
       {required this.title,
       @JsonKey(name: 'title_long') this.titleLong,
@@ -1135,37 +1104,8 @@ class _$_Book with DiagnosticableTreeMixin implements _Book {
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'Book(title: $title, titleLong: $titleLong, isbn: $isbn, isbn13: $isbn13, deweyDecimal: $deweyDecimal, binding: $binding, publisher: $publisher, language: $language, datePublished: $datePublished, edition: $edition, pages: $pages, dimensions: $dimensions, overview: $overview, image: $image, msrp: $msrp, excerpt: $excerpt, synopsis: $synopsis, authors: $authors, subjects: $subjects, reviews: $reviews, prices: $prices, related: $related)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'Book'))
-      ..add(DiagnosticsProperty('title', title))
-      ..add(DiagnosticsProperty('titleLong', titleLong))
-      ..add(DiagnosticsProperty('isbn', isbn))
-      ..add(DiagnosticsProperty('isbn13', isbn13))
-      ..add(DiagnosticsProperty('deweyDecimal', deweyDecimal))
-      ..add(DiagnosticsProperty('binding', binding))
-      ..add(DiagnosticsProperty('publisher', publisher))
-      ..add(DiagnosticsProperty('language', language))
-      ..add(DiagnosticsProperty('datePublished', datePublished))
-      ..add(DiagnosticsProperty('edition', edition))
-      ..add(DiagnosticsProperty('pages', pages))
-      ..add(DiagnosticsProperty('dimensions', dimensions))
-      ..add(DiagnosticsProperty('overview', overview))
-      ..add(DiagnosticsProperty('image', image))
-      ..add(DiagnosticsProperty('msrp', msrp))
-      ..add(DiagnosticsProperty('excerpt', excerpt))
-      ..add(DiagnosticsProperty('synopsis', synopsis))
-      ..add(DiagnosticsProperty('authors', authors))
-      ..add(DiagnosticsProperty('subjects', subjects))
-      ..add(DiagnosticsProperty('reviews', reviews))
-      ..add(DiagnosticsProperty('prices', prices))
-      ..add(DiagnosticsProperty('related', related));
   }
 
   @override
@@ -1567,7 +1507,7 @@ class __$$_MerchantCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Merchant with DiagnosticableTreeMixin implements _Merchant {
+class _$_Merchant implements _Merchant {
   _$_Merchant(
       {required this.condition,
       required this.merchant,
@@ -1626,23 +1566,8 @@ class _$_Merchant with DiagnosticableTreeMixin implements _Merchant {
   final String link;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'Merchant(condition: $condition, merchant: $merchant, merchantLogo: $merchantLogo, merchantLogoOffset: $merchantLogoOffset, shipping: $shipping, price: $price, total: $total, link: $link)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'Merchant'))
-      ..add(DiagnosticsProperty('condition', condition))
-      ..add(DiagnosticsProperty('merchant', merchant))
-      ..add(DiagnosticsProperty('merchantLogo', merchantLogo))
-      ..add(DiagnosticsProperty('merchantLogoOffset', merchantLogoOffset))
-      ..add(DiagnosticsProperty('shipping', shipping))
-      ..add(DiagnosticsProperty('price', price))
-      ..add(DiagnosticsProperty('total', total))
-      ..add(DiagnosticsProperty('link', link));
   }
 
   @override
@@ -1843,9 +1768,7 @@ class __$$_PublisherQueryResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PublisherQueryResult
-    with DiagnosticableTreeMixin
-    implements _PublisherQueryResult {
+class _$_PublisherQueryResult implements _PublisherQueryResult {
   _$_PublisherQueryResult(
       {required this.total, final List<String> publishers = const []})
       : _publishers = publishers;
@@ -1870,17 +1793,8 @@ class _$_PublisherQueryResult
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'PublisherQueryResult(total: $total, publishers: $publishers)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'PublisherQueryResult'))
-      ..add(DiagnosticsProperty('total', total))
-      ..add(DiagnosticsProperty('publishers', publishers));
   }
 
   @override
@@ -2029,7 +1943,7 @@ class __$$_PublisherCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Publisher with DiagnosticableTreeMixin implements _Publisher {
+class _$_Publisher implements _Publisher {
   _$_Publisher({required this.name, final List<Book> books = const []})
       : _books = books;
 
@@ -2053,17 +1967,8 @@ class _$_Publisher with DiagnosticableTreeMixin implements _Publisher {
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'Publisher(name: $name, books: $books)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'Publisher'))
-      ..add(DiagnosticsProperty('name', name))
-      ..add(DiagnosticsProperty('books', books));
   }
 
   @override
@@ -2211,9 +2116,7 @@ class __$$_SubjectQueryResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SubjectQueryResult
-    with DiagnosticableTreeMixin
-    implements _SubjectQueryResult {
+class _$_SubjectQueryResult implements _SubjectQueryResult {
   _$_SubjectQueryResult(
       {required this.total, final List<String> subjects = const []})
       : _subjects = subjects;
@@ -2238,17 +2141,8 @@ class _$_SubjectQueryResult
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'SubjectQueryResult(total: $total, subjects: $subjects)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'SubjectQueryResult'))
-      ..add(DiagnosticsProperty('total', total))
-      ..add(DiagnosticsProperty('subjects', subjects));
   }
 
   @override
@@ -2394,7 +2288,7 @@ class __$$_SubjectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Subject with DiagnosticableTreeMixin implements _Subject {
+class _$_Subject implements _Subject {
   _$_Subject({required this.subject, final List<Book> books = const []})
       : _books = books;
 
@@ -2418,17 +2312,8 @@ class _$_Subject with DiagnosticableTreeMixin implements _Subject {
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'Subject(subject: $subject, books: $books)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'Subject'))
-      ..add(DiagnosticsProperty('subject', subject))
-      ..add(DiagnosticsProperty('books', books));
   }
 
   @override
