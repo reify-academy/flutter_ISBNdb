@@ -67,8 +67,8 @@ class Book with _$Book {
     /// List of the merchants selling this book with real-time prices
     List<Merchant>? prices,
 
-    /// Not documented in the official API
-    List<String>? related,
+    /// List of related isbns
+    Map<String, String>? related,
   }) = _Book;
 
   /// Used to build the object from the response of the ISBNdb API

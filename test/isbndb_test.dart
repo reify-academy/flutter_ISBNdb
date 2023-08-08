@@ -3,7 +3,7 @@ import 'package:isbndb/isbndb.dart';
 
 void main() {
   group("ISBNdb", () {
-    final isbndb = ISBNdb("put_your_key_here");
+    final isbndb = ISBNdb("YOUR_API_KEY");
 
     test('Should get books from Michel Bussi', () async {
       expect(
@@ -27,6 +27,13 @@ void main() {
       expect(
         await isbndb.getBooks("Google Flutter"),
         isInstanceOf<BookQueryResult>(),
+      );
+    });
+
+    test('Should get book with related books', () async {
+      expect(
+        await isbndb.getBook("9780061745171"),
+        isInstanceOf<Book>(),
       );
     });
     test('Should get books from ISBNs', () async {

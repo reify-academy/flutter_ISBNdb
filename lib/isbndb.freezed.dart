@@ -635,8 +635,8 @@ mixin _$Book {
   /// List of the merchants selling this book with real-time prices
   List<Merchant>? get prices => throw _privateConstructorUsedError;
 
-  /// Not documented in the official API
-  List<String>? get related => throw _privateConstructorUsedError;
+  /// List of related isbns
+  Map<String, String>? get related => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -672,7 +672,7 @@ abstract class $BookCopyWith<$Res> {
       List<String>? subjects,
       List<String>? reviews,
       List<Merchant>? prices,
-      List<String>? related});
+      Map<String, String>? related});
 }
 
 /// @nodoc
@@ -799,7 +799,7 @@ class _$BookCopyWithImpl<$Res, $Val extends Book>
       related: freezed == related
           ? _value.related
           : related // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
+              as Map<String, String>?,
     ) as $Val);
   }
 }
@@ -834,7 +834,7 @@ abstract class _$$_BookCopyWith<$Res> implements $BookCopyWith<$Res> {
       List<String>? subjects,
       List<String>? reviews,
       List<Merchant>? prices,
-      List<String>? related});
+      Map<String, String>? related});
 }
 
 /// @nodoc
@@ -957,7 +957,7 @@ class __$$_BookCopyWithImpl<$Res> extends _$BookCopyWithImpl<$Res, _$_Book>
       related: freezed == related
           ? _value._related
           : related // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
+              as Map<String, String>?,
     ));
   }
 }
@@ -987,7 +987,7 @@ class _$_Book with DiagnosticableTreeMixin implements _Book {
       final List<String>? subjects,
       final List<String>? reviews,
       final List<Merchant>? prices,
-      final List<String>? related})
+      final Map<String, String>? related})
       : _authors = authors,
         _subjects = subjects,
         _reviews = reviews,
@@ -1121,17 +1121,17 @@ class _$_Book with DiagnosticableTreeMixin implements _Book {
     return EqualUnmodifiableListView(value);
   }
 
-  /// Not documented in the official API
-  final List<String>? _related;
+  /// List of related isbns
+  final Map<String, String>? _related;
 
-  /// Not documented in the official API
+  /// List of related isbns
   @override
-  List<String>? get related {
+  Map<String, String>? get related {
     final value = _related;
     if (value == null) return null;
-    if (_related is EqualUnmodifiableListView) return _related;
+    if (_related is EqualUnmodifiableMapView) return _related;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
+    return EqualUnmodifiableMapView(value);
   }
 
   @override
@@ -1272,7 +1272,7 @@ abstract class _Book implements Book {
       final List<String>? subjects,
       final List<String>? reviews,
       final List<Merchant>? prices,
-      final List<String>? related}) = _$_Book;
+      final Map<String, String>? related}) = _$_Book;
 
   factory _Book.fromJson(Map<String, dynamic> json) = _$_Book.fromJson;
 
@@ -1367,8 +1367,8 @@ abstract class _Book implements Book {
   List<Merchant>? get prices;
   @override
 
-  /// Not documented in the official API
-  List<String>? get related;
+  /// List of related isbns
+  Map<String, String>? get related;
   @override
   @JsonKey(ignore: true)
   _$$_BookCopyWith<_$_Book> get copyWith => throw _privateConstructorUsedError;

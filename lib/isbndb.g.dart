@@ -79,8 +79,9 @@ _$_Book _$$_BookFromJson(Map<String, dynamic> json) => _$_Book(
       prices: (json['prices'] as List<dynamic>?)
           ?.map((e) => Merchant.fromJson(e as Map<String, dynamic>))
           .toList(),
-      related:
-          (json['related'] as List<dynamic>?)?.map((e) => e as String).toList(),
+      related: (json['related'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, e as String),
+      ),
     );
 
 Map<String, dynamic> _$$_BookToJson(_$_Book instance) => <String, dynamic>{
