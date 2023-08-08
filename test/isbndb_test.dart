@@ -8,55 +8,55 @@ void main() {
     test('Should get books from Michel Bussi', () async {
       expect(
         await isbndb.getAuthor("Bussi Michel"),
-        isInstanceOf<Author>(),
+        isA<Author>(),
       );
     });
     test('Should get authors matching name werber', () async {
       expect(
         await isbndb.getAuthors("werber"),
-        isInstanceOf<AuthorQueryResult>(),
+        isA<AuthorQueryResult>(),
       );
     });
     test('Should get "Learn Google Flutter Fast"', () async {
       expect(
         await isbndb.getBook("9781092297370"),
-        isInstanceOf<Book>(),
+        isA<Book>(),
       );
     });
     test('Should get books about Flutter', () async {
       expect(
         await isbndb.getBooks("Google Flutter"),
-        isInstanceOf<BookQueryResult>(),
+        isA<BookQueryResult>(),
       );
     });
     test('Should get books from ISBNs', () async {
       expect(
         await isbndb.getBooksFromISBNs(["9781092297370", "9781680506952"]),
-        isInstanceOf<BookQueryResult>(),
+        isA<BookQueryResult>(),
       );
     });
     test('Should get list of publishers matching "Nathan"', () async {
       expect(
         await isbndb.getPublishers("Nathan"),
-        isInstanceOf<PublisherQueryResult>(),
+        isA<PublisherQueryResult>(),
       );
     });
     test('Should get books from publisher Nathan', () async {
       expect(
         await isbndb.getPublisher("Nathan"),
-        isInstanceOf<Publisher>(),
+        isA<Publisher>(),
       );
     });
     test('Should get list of subjects matching "flutter"', () async {
       expect(
         await isbndb.getSubjects("flutter"),
-        isInstanceOf<SubjectQueryResult>(),
+        isA<SubjectQueryResult>(),
       );
     });
     test('Should get books matching subject "flutter"', () async {
       expect(
         await isbndb.getSubject("flutter"),
-        isInstanceOf<Subject>(),
+        isA<Subject>(),
       );
     });
   });
