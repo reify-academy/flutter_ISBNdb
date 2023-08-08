@@ -620,8 +620,8 @@ mixin _$Book {
   /// Excerpt of the book
   String? get excerpt => throw _privateConstructorUsedError;
 
-  /// Synopsys of the book
-  String? get synopsys => throw _privateConstructorUsedError;
+  /// Synopsis of the book
+  String? get synopsis => throw _privateConstructorUsedError;
 
   /// List of the authors of the book
   List<String?>? get authors => throw _privateConstructorUsedError;
@@ -667,7 +667,7 @@ abstract class $BookCopyWith<$Res> {
       String? image,
       @_MsrpConverter() double? msrp,
       String? excerpt,
-      String? synopsys,
+      String? synopsis,
       List<String?>? authors,
       List<String>? subjects,
       List<String>? reviews,
@@ -704,7 +704,7 @@ class _$BookCopyWithImpl<$Res, $Val extends Book>
     Object? image = freezed,
     Object? msrp = freezed,
     Object? excerpt = freezed,
-    Object? synopsys = freezed,
+    Object? synopsis = freezed,
     Object? authors = freezed,
     Object? subjects = freezed,
     Object? reviews = freezed,
@@ -776,9 +776,9 @@ class _$BookCopyWithImpl<$Res, $Val extends Book>
           ? _value.excerpt
           : excerpt // ignore: cast_nullable_to_non_nullable
               as String?,
-      synopsys: freezed == synopsys
-          ? _value.synopsys
-          : synopsys // ignore: cast_nullable_to_non_nullable
+      synopsis: freezed == synopsis
+          ? _value.synopsis
+          : synopsis // ignore: cast_nullable_to_non_nullable
               as String?,
       authors: freezed == authors
           ? _value.authors
@@ -829,7 +829,7 @@ abstract class _$$_BookCopyWith<$Res> implements $BookCopyWith<$Res> {
       String? image,
       @_MsrpConverter() double? msrp,
       String? excerpt,
-      String? synopsys,
+      String? synopsis,
       List<String?>? authors,
       List<String>? subjects,
       List<String>? reviews,
@@ -862,7 +862,7 @@ class __$$_BookCopyWithImpl<$Res> extends _$BookCopyWithImpl<$Res, _$_Book>
     Object? image = freezed,
     Object? msrp = freezed,
     Object? excerpt = freezed,
-    Object? synopsys = freezed,
+    Object? synopsis = freezed,
     Object? authors = freezed,
     Object? subjects = freezed,
     Object? reviews = freezed,
@@ -934,9 +934,9 @@ class __$$_BookCopyWithImpl<$Res> extends _$BookCopyWithImpl<$Res, _$_Book>
           ? _value.excerpt
           : excerpt // ignore: cast_nullable_to_non_nullable
               as String?,
-      synopsys: freezed == synopsys
-          ? _value.synopsys
-          : synopsys // ignore: cast_nullable_to_non_nullable
+      synopsis: freezed == synopsis
+          ? _value.synopsis
+          : synopsis // ignore: cast_nullable_to_non_nullable
               as String?,
       authors: freezed == authors
           ? _value._authors
@@ -982,7 +982,7 @@ class _$_Book with DiagnosticableTreeMixin implements _Book {
       this.image,
       @_MsrpConverter() this.msrp,
       this.excerpt,
-      this.synopsys,
+      this.synopsis,
       final List<String?>? authors,
       final List<String>? subjects,
       final List<String>? reviews,
@@ -1065,9 +1065,9 @@ class _$_Book with DiagnosticableTreeMixin implements _Book {
   @override
   final String? excerpt;
 
-  /// Synopsys of the book
+  /// Synopsis of the book
   @override
-  final String? synopsys;
+  final String? synopsis;
 
   /// List of the authors of the book
   final List<String?>? _authors;
@@ -1136,7 +1136,7 @@ class _$_Book with DiagnosticableTreeMixin implements _Book {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Book(title: $title, titleLong: $titleLong, isbn: $isbn, isbn13: $isbn13, deweyDecimal: $deweyDecimal, binding: $binding, publisher: $publisher, language: $language, datePublished: $datePublished, edition: $edition, pages: $pages, dimensions: $dimensions, overview: $overview, image: $image, msrp: $msrp, excerpt: $excerpt, synopsys: $synopsys, authors: $authors, subjects: $subjects, reviews: $reviews, prices: $prices, related: $related)';
+    return 'Book(title: $title, titleLong: $titleLong, isbn: $isbn, isbn13: $isbn13, deweyDecimal: $deweyDecimal, binding: $binding, publisher: $publisher, language: $language, datePublished: $datePublished, edition: $edition, pages: $pages, dimensions: $dimensions, overview: $overview, image: $image, msrp: $msrp, excerpt: $excerpt, synopsis: $synopsis, authors: $authors, subjects: $subjects, reviews: $reviews, prices: $prices, related: $related)';
   }
 
   @override
@@ -1160,7 +1160,7 @@ class _$_Book with DiagnosticableTreeMixin implements _Book {
       ..add(DiagnosticsProperty('image', image))
       ..add(DiagnosticsProperty('msrp', msrp))
       ..add(DiagnosticsProperty('excerpt', excerpt))
-      ..add(DiagnosticsProperty('synopsys', synopsys))
+      ..add(DiagnosticsProperty('synopsis', synopsis))
       ..add(DiagnosticsProperty('authors', authors))
       ..add(DiagnosticsProperty('subjects', subjects))
       ..add(DiagnosticsProperty('reviews', reviews))
@@ -1196,8 +1196,8 @@ class _$_Book with DiagnosticableTreeMixin implements _Book {
             (identical(other.image, image) || other.image == image) &&
             (identical(other.msrp, msrp) || other.msrp == msrp) &&
             (identical(other.excerpt, excerpt) || other.excerpt == excerpt) &&
-            (identical(other.synopsys, synopsys) ||
-                other.synopsys == synopsys) &&
+            (identical(other.synopsis, synopsis) ||
+                other.synopsis == synopsis) &&
             const DeepCollectionEquality().equals(other._authors, _authors) &&
             const DeepCollectionEquality().equals(other._subjects, _subjects) &&
             const DeepCollectionEquality().equals(other._reviews, _reviews) &&
@@ -1225,7 +1225,7 @@ class _$_Book with DiagnosticableTreeMixin implements _Book {
         image,
         msrp,
         excerpt,
-        synopsys,
+        synopsis,
         const DeepCollectionEquality().hash(_authors),
         const DeepCollectionEquality().hash(_subjects),
         const DeepCollectionEquality().hash(_reviews),
@@ -1267,7 +1267,7 @@ abstract class _Book implements Book {
       final String? image,
       @_MsrpConverter() final double? msrp,
       final String? excerpt,
-      final String? synopsys,
+      final String? synopsis,
       final List<String?>? authors,
       final List<String>? subjects,
       final List<String>? reviews,
@@ -1347,8 +1347,8 @@ abstract class _Book implements Book {
   String? get excerpt;
   @override
 
-  /// Synopsys of the book
-  String? get synopsys;
+  /// Synopsis of the book
+  String? get synopsis;
   @override
 
   /// List of the authors of the book

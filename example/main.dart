@@ -129,8 +129,8 @@ class _AppState extends State<App> {
                             label: "Published on:",
                             value: DateFormat.yMMMMd()
                                 .format(book!.datePublished!)),
-                      if (book!.synopsys != null)
-                        BookRow(label: "Synopsys:", value: book!.synopsys!),
+                      if (book!.synopsis != null)
+                        BookRow(label: "Synopsis:", value: book!.synopsis!),
                     ],
                   ),
                 ),

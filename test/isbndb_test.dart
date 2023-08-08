@@ -32,8 +32,15 @@ void main() {
 
     test('Should get book with related books', () async {
       expect(
-        await isbndb.getBook("9780061745171"),
+        await isbndb.getBook("9780070132351"),
         isInstanceOf<Book>(),
+      );
+    });
+
+    test('Should get synopsys for book with html formatting', () async {
+      expect(
+        await isbndb.getBook("9780070132351"),
+        isInstanceOf<Book>().having((p0) => p0.synopsis, "synopsis", isNotNull),
       );
     });
     test('Should get books from ISBNs', () async {

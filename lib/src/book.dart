@@ -52,8 +52,8 @@ class Book with _$Book {
     /// Excerpt of the book
     String? excerpt,
 
-    /// Synopsys of the book
-    String? synopsys,
+    /// Synopsis of the book
+    String? synopsis,
 
     /// List of the authors of the book
     List<String?>? authors,

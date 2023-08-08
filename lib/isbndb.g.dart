@@ -67,7 +67,7 @@ _$_Book _$$_BookFromJson(Map<String, dynamic> json) => _$_Book(
       image: json['image'] as String?,
       msrp: const _MsrpConverter().fromJson(json['msrp']),
       excerpt: json['excerpt'] as String?,
-      synopsys: json['synopsys'] as String?,
+      synopsis: json['synopsis'] as String?,
       authors: (json['authors'] as List<dynamic>?)
           ?.map((e) => e as String?)
           .toList(),
@@ -101,7 +101,7 @@ Map<String, dynamic> _$$_BookToJson(_$_Book instance) => <String, dynamic>{
       'image': instance.image,
       'msrp': const _MsrpConverter().toJson(instance.msrp),
       'excerpt': instance.excerpt,
-      'synopsys': instance.synopsys,
+      'synopsis': instance.synopsis,
       'authors': instance.authors,
       'subjects': instance.subjects,
       'reviews': instance.reviews,
